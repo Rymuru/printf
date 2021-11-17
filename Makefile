@@ -1,10 +1,11 @@
 
 SRCS	=	\
-			ft_printf.c		\
-			ft_hexa.c		\
-			ft_putchar.c	\
-			ft_putstr.c		\
-			ft_strlen.c		\
+			ft_printf.c			\
+			ft_hexa.c			\
+			ft_hexaverrmaj.c	\
+			ft_putchar.c		\
+			ft_putstr.c			\
+			ft_strlen.c			\
 			ft_putnbr.c
 
 

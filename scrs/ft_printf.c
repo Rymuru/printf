@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:25:40 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 21:54:14 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/17 23:36:41 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ static int ft_sort(char flag, va_list arg)
         status = ft_putnbr(va_arg(arg, int));
     else if (flag == 'x')
         status = ft_hexa(va_arg(arg, unsigned int));
+    else if (flag == 'X')
+        status = ft_hexaverrmaj(va_arg(arg, unsigned int));
     return (status);
 }
 
