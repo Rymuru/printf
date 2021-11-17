@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:25:40 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 21:07:50 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/17 21:13:10 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,12 @@ int ft_sort(char flag, va_list arg)
 {
     int status;
     
-    if (flag == 'c')
+    if (flag == '%')
+        status = ft_putchar('%');
+    else if (flag == 'c')
         status = ft_putchar((char)va_arg(arg, int));
     else if (flag == 's')
-        status = ft_putstr(va_arg(arg, char *);
+        status = ft_putstr(va_arg(arg, char *));
     else if (flag == 'd' || flag == 'i')
         status = ft_putnbr(va_arg(arg, int));
     else if (flag == 'x')
