@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 18:15:23 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/11 18:08:40 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/17 21:07:56 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int ft_putstr(char* str)
 {
     if (str)
         write(1, str, ft_strlen(str));
-    return (0);
+    return (ft_strlen(str));
 }

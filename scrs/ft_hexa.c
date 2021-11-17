@@ -6,25 +6,38 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:48:47 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 20:09:22 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/17 21:07:48 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int    ft_bank(int nb)
+static int	ft_statushexa(int n)
+{
+	int total;
+
+	total = 0;
+
+	while (n > 0)
+	{
+		total++;
+		n = n / 16;
+	}
+	return (total);
+}
+
+int    ft_hexa(unsigned int n)
 {
     int     i;
-    char    *stock = "0123456789ABCDEF";
+    int     total;
+    char    *stock = "0123456789abcdef";
 
-    i = 0;
-    while (nb > 0)
-    {
-        i++;
-        if (stock[i] == 0)
-            i = 0;
-        nb--;
-    }
-    i = stock[i];
-    return (i);
+	if (n >= 0 && n <= 16)
+		ft_putchar(stock[n]);
+	else if (n > 16)
+	{
+		ft_hexa(n / 16);
+		ft_hexa(n % 16);
+	}
+	return(ft_statushexa(n));
 }
