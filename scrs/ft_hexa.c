@@ -6,7 +6,25 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:48:47 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 19:48:51 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/17 20:09:22 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
+int    ft_bank(int nb)
+{
+    int     i;
+    char    *stock = "0123456789ABCDEF";
+
+    i = 0;
+    while (nb > 0)
+    {
+        i++;
+        if (stock[i] == 0)
+            i = 0;
+        nb--;
+    }
+    i = stock[i];
+    return (i);
+}
