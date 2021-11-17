@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:48:47 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 21:17:54 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/17 21:27:12 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,9 @@ static int	ft_statushexa(int n)
 
 int    ft_hexa(unsigned int n)
 {
-    int     i;
-    int     total;
     char    *stock = "0123456789abcdef";
 
-	if (n >= 0 && n <= 16)
+	if (n <= 16)
 		ft_putchar(stock[n]);
 	else if (n > 16)
 	{

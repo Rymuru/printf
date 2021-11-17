@@ -6,12 +6,12 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:25:49 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 21:17:52 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/17 21:22:55 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <unistd.h>
 # include <stdarg.h>

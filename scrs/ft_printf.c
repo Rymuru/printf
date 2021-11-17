@@ -6,12 +6,29 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:25:40 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 21:13:10 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/17 21:26:14 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ft_printf.h"
+
+static int ft_sort(char flag, va_list arg)
+{
+    int status;
+    
+    if (flag == '%')
+        status = ft_putchar('%');
+    else if (flag == 'c')
+        status = ft_putchar((char)va_arg(arg, int));
+    else if (flag == 's')
+        status = ft_putstr(va_arg(arg, char *));
+    else if (flag == 'd' || flag == 'i')
+        status = ft_putnbr(va_arg(arg, int));
+    else if (flag == 'x')
+        status = ft_hexa(va_arg(arg, unsigned int));
+    return (status);
+}
 
 int ft_printf(const char *type, ...)
 {
@@ -33,22 +50,5 @@ int ft_printf(const char *type, ...)
         }
     }
     va_end(arg);
-    return (status);
-}
-
-int ft_sort(char flag, va_list arg)
-{
-    int status;
-    
-    if (flag == '%')
-        status = ft_putchar('%');
-    else if (flag == 'c')
-        status = ft_putchar((char)va_arg(arg, int));
-    else if (flag == 's')
-        status = ft_putstr(va_arg(arg, char *));
-    else if (flag == 'd' || flag == 'i')
-        status = ft_putnbr(va_arg(arg, int));
-    else if (flag == 'x')
-        status = ft_hexa(va_arg(arg, unsigned int));
     return (status);
 }
