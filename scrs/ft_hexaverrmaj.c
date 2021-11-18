@@ -6,13 +6,13 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 23:32:51 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 23:37:45 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/18 19:22:23 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_statushexaverrmaj(int n)
+static int	ft_statushexaverrmaj(unsigned int n)
 {
 	int total;
 

@@ -6,13 +6,13 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:48:47 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 21:27:12 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/18 19:22:22 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_statushexa(int n)
+static int	ft_statushexa(unsigned int n)
 {
 	int total;
 
