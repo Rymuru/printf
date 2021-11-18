@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 23:32:51 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/18 19:22:23 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/18 20:21:38 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int    ft_hexaverrmaj(unsigned int n)
 		ft_putchar(stock[n]);
 	else if (n > 16)
 	{
-		ft_hexa(n / 16);
-		ft_hexa(n % 16);
+		ft_hexaverrmaj(n / 16);
+		ft_hexaverrmaj(n % 16);
 	}
 	return(ft_statushexaverrmaj(n));
 }
