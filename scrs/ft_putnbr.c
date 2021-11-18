@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 18:40:47 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/17 21:07:55 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/18 20:39:17 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static int	ft_status(int n)
 		total++;
 		n = n * (-1);
 	}
+	if (n == 0)
+		return (1);
 	while (n > 0)
 	{
 		total++;

@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 23:32:51 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/18 20:21:38 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/18 20:39:21 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ static int	ft_statushexaverrmaj(unsigned int n)
 	int total;
 
 	total = 0;
-
+	if (n == 0)
+		total = 1;
 	while (n > 0)
 	{
 		total++;
