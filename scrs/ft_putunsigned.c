@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putunsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 19:25:49 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/18 18:41:32 by bcoenon          ###   ########.fr       */
+/*   Created: 2021/11/18 18:33:17 by bcoenon           #+#    #+#             */
+/*   Updated: 2021/11/18 18:42:49 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+static int	ft_status(unsigned int n)
+{
+	int total;
 
-int     ft_putchar(char c);
-int     ft_putnbr(int n);
-int     ft_putunsigned(unsigned int n);
-int     ft_putstr(char* str);
-int     ft_strlen(char* str);
-int     ft_hexa(unsigned int n);
-int     ft_hexaverrmaj(unsigned int n);
-int     ft_printf(const char *type, ...);
-#endif
+	total = 0;
+	while (n > 0)
+	{
+		total++;
+		n = n / 10;
+	}
+	return (total);
+}
+
+int ft_putunsigned(unsigned int n)
+{
+	if (n <= 9)
+		ft_putchar(n + '0');
+
+	else if (n > 9)
+	{
+		ft_putunsigned(n / 10);
+		ft_putunsigned(n % 10);
+	}
+	return(ft_status(n));
+}
