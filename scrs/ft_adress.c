@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 02:26:49 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/21 02:58:15 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/21 20:12:54 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ int ft_adress(void *addr)
     ft_putchar('0');
     ft_putchar('x');
     ft_print_addr(nb);
-    return (nb_carac(nb + 2));
+    return (nb_carac(nb ) + 2);
 }
