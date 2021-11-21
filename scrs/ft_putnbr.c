@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 18:40:47 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/18 20:39:17 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/21 02:24:54 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	ft_status(int n)
 	return (total);
 }
 
-int ft_putnbr(int n)
+int	ft_putnbr(int n)
 {
 	if (n == -2147483648)
 	{

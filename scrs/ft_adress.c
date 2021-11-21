@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexa.c                                          :+:      :+:    :+:   */
+/*   ft_adress.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 19:48:47 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/21 02:30:18 by bcoenon          ###   ########.fr       */
+/*   Created: 2021/11/21 02:26:49 by bcoenon           #+#    #+#             */
+/*   Updated: 2021/11/21 02:58:15 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_statushexa(unsigned int n)
+
+void    ft_print_addr(uint64_t nb)
+{  
+    char    *stock = "0123456789abcdef";
+ 
+    if (nb <= 16)
+	    ft_putchar(stock[nb]);
+    else if (nb > 16)
+{
+	    ft_print_addr(nb / 16);
+	    ft_print_addr(nb % 16);
+    }
+}
+
+static int	nb_carac(unsigned int n)
 {
 	int total;
 
@@ -27,16 +41,14 @@ static int	ft_statushexa(unsigned int n)
 	return (total);
 }
 
-int	ft_hexa(unsigned int n)
+int ft_adress(void *addr)
 {
-    char    *stock = "0123456789abcdef";
+    uint64_t nb;
+    
 
-	if (n <= 16)
-		ft_putchar(stock[n]);
-	else if (n > 16)
-	{
-		ft_hexa(n / 16);
-		ft_hexa(n % 16);
-	}
-	return(ft_statushexa(n));
+    nb = (uint64_t)addr;
+    ft_putchar('0');
+    ft_putchar('x');
+    ft_print_addr(nb);
+    return (nb_carac(nb + 2));
 }

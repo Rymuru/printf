@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 18:33:17 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/18 20:41:19 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/21 02:24:54 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_status(unsigned int n)
 	return (total);
 }
 
-int ft_putunsigned(unsigned int n)
+int	ft_putunsigned(unsigned int n)
 {
 	if (n <= 9)
 		ft_putchar(n + '0');

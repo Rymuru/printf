@@ -7,7 +7,8 @@ SRCS	=	\
 			ft_putstr.c			\
 			ft_strlen.c			\
 			ft_putnbr.c			\
-			ft_putunsigned.c	
+			ft_putunsigned.c	\
+			ft_adress.c
 
 
 SRCSD	= scrs/
