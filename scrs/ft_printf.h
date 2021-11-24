@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:25:49 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/24 11:40:42 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 14:47:12 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <inttypes.h>
+
+# if defined(__linux__)
+#  define OSNUL "(nil)"
+# elif __APPLE__
+#  define OSNUL "0x0"
+# endif
 
 int	ft_putchar(char c);
 int	ft_putnbr(int n);

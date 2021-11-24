@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 02:26:49 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/24 10:29:44 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 14:48:32 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_adress(void *addr)
 	uint64_t	nb;
 
 	if (addr == NULL)
-		return (ft_putstr("(nil)"));
+		return (ft_putstr(OSNUL));
 	nb = (uint64_t)addr;
 	ft_putchar('0');
 	ft_putchar('x');
