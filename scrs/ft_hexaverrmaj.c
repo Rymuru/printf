@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 23:32:51 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/21 02:25:27 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 09:48:06 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_hexaverrmaj(unsigned int n)
 {
     char    *stock = "0123456789ABCDEF";
 
-	if (n <= 16)
+	if (n < 16)
 		ft_putchar(stock[n]);
-	else if (n > 16)
+	else
 	{
 		ft_hexaverrmaj(n / 16);
 		ft_hexaverrmaj(n % 16);

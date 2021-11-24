@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:25:40 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/21 02:29:00 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 09:47:06 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,13 @@ int ft_printf(const char *type, ...)
     va_list arg;
 
     va_start(arg, type);
-    i= 0;
+    i = 0;
     status = 0;
     while (type[i])
     {
         if (type[i] == '%')
         {
-            status += ft_sort(type[i+1], arg);
+            status += ft_sort(type[i + 1], arg);
             i++;
         }
         else

@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 02:26:49 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/21 20:12:54 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 10:07:54 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,21 @@
 
 void    ft_print_addr(uint64_t nb)
 {  
-    char    *stock = "0123456789abcdef";
- 
-    if (nb <= 16)
+    char    *stock;
+
+	stock = "0123456789abcdef";
+    if (nb < 16)
 	    ft_putchar(stock[nb]);
-    else if (nb > 16)
+    else
 {
 	    ft_print_addr(nb / 16);
 	    ft_print_addr(nb % 16);
     }
 }
 
-static int	nb_carac(unsigned int n)
+static int	nb_carac(uint64_t n)
 {
-	int total;
+	uint64_t total;
 
 	total = 0;
 	if (n == 0)
@@ -45,7 +46,8 @@ int ft_adress(void *addr)
 {
     uint64_t nb;
     
-
+	if (addr == NULL)
+		return(ft_putstr("(nil)"));
     nb = (uint64_t)addr;
     ft_putchar('0');
     ft_putchar('x');
