@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:25:40 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/24 11:23:53 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 15:10:09 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static int	ft_sort(char flag, va_list arg)
 {
 	int	status;
 
+	status = 0;
 	if (flag == '%')
 		status = ft_putchar('%');
 	else if (flag == 'c')
