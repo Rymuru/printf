@@ -6,30 +6,29 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 02:26:49 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/24 10:07:54 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 10:29:44 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-
-void    ft_print_addr(uint64_t nb)
-{  
-    char    *stock;
+void	ft_print_addr(uint64_t nb)
+{
+	char	*stock;
 
 	stock = "0123456789abcdef";
-    if (nb < 16)
-	    ft_putchar(stock[nb]);
-    else
-{
-	    ft_print_addr(nb / 16);
-	    ft_print_addr(nb % 16);
-    }
+	if (nb < 16)
+		ft_putchar(stock[nb]);
+	else
+	{
+		ft_print_addr(nb / 16);
+		ft_print_addr(nb % 16);
+	}
 }
 
 static int	nb_carac(uint64_t n)
 {
-	uint64_t total;
+	uint64_t	total;
 
 	total = 0;
 	if (n == 0)
@@ -42,15 +41,15 @@ static int	nb_carac(uint64_t n)
 	return (total);
 }
 
-int ft_adress(void *addr)
+int	ft_adress(void *addr)
 {
-    uint64_t nb;
-    
+	uint64_t	nb;
+
 	if (addr == NULL)
-		return(ft_putstr("(nil)"));
-    nb = (uint64_t)addr;
-    ft_putchar('0');
-    ft_putchar('x');
-    ft_print_addr(nb);
-    return (nb_carac(nb ) + 2);
+		return (ft_putstr("(nil)"));
+	nb = (uint64_t)addr;
+	ft_putchar('0');
+	ft_putchar('x');
+	ft_print_addr(nb);
+	return (nb_carac(nb) + 2);
 }

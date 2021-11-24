@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:48:47 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/24 09:48:09 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 10:35:26 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_statushexa(unsigned int n)
 {
-	int total;
+	int	total;
 
 	total = 0;
 	if (n == 0)
@@ -29,8 +29,9 @@ static int	ft_statushexa(unsigned int n)
 
 int	ft_hexa(unsigned int n)
 {
-    char    *stock = "0123456789abcdef";
+	char	*stock;
 
+	stock = "0123456789abcdef";
 	if (n < 16)
 		ft_putchar(stock[n]);
 	else
@@ -38,5 +39,5 @@ int	ft_hexa(unsigned int n)
 		ft_hexa(n / 16);
 		ft_hexa(n % 16);
 	}
-	return(ft_statushexa(n));
+	return (ft_statushexa(n));
 }

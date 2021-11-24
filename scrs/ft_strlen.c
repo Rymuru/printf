@@ -6,18 +6,18 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 18:20:49 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/21 02:24:54 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 11:54:54 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_strlen(char* str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i] != 0)
-        i++;
-    return (i);
+	i = 0;
+	while (str[i] != 0)
+		i++;
+	return (i);
 }

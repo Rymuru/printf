@@ -6,7 +6,7 @@
 /*   By: bcoenon <bcoenon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 18:40:47 by bcoenon           #+#    #+#             */
-/*   Updated: 2021/11/21 02:24:54 by bcoenon          ###   ########.fr       */
+/*   Updated: 2021/11/24 11:47:16 by bcoenon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_status(int n)
 {
-	int total;
+	int	total;
 
 	total = 0;
 	if (n < 0)
@@ -46,11 +46,10 @@ int	ft_putnbr(int n)
 	}
 	else if (n >= 0 && n <= 9)
 		ft_putchar(n + '0');
-
 	else if (n > 9)
 	{
 		ft_putnbr(n / 10);
 		ft_putnbr(n % 10);
 	}
-	return(ft_status(n));
+	return (ft_status(n));
 }
